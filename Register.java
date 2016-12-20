@@ -102,7 +102,7 @@ public class Register extends JFrame {
 		txt_usr.setBounds(87, 238, 193, 29);
 		contentPane.add(txt_usr);
 		
-		//Registor function
+		//Register function
 		btn_rgstr = new JButton("Register");
 		btn_rgstr.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -112,12 +112,14 @@ public class Register extends JFrame {
 				phone = txt_cntct.getText().toString();
 				username = txt_usr.getText().toString();
 				password = txt_pass.getText().toString();
+				// checking texts from form and if everything is okay, user registered successfully. 
 				if(!fname.equals("")&&!lname.equals("")&&!email.equals("")&&!phone.equals("")&&!username.equals("")&&!password.equals("")){
 					JOptionPane.showMessageDialog(null,"You are registered succesfully");
 					AccountHome ac = new AccountHome();
 					ac.setVisible(true);
 					dispose();
 				}else	
+					// else function if user can't fill from correct. (Error message)
 					JOptionPane.showMessageDialog(null,"please enter correct info");
 			}
 		});
