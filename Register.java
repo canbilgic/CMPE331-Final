@@ -1,4 +1,4 @@
-//Creating Register class
+//Creating Register class which included name, last name, email, username, password and Contact number frames.
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -62,6 +62,7 @@ public class Register extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Top header label
 		Label lbl_intro = new Label("Register yourself and join our system!!");
 		lbl_intro.setFont(new Font("Dialog", Font.PLAIN, 14));
 		lbl_intro.setBackground(SystemColor.controlHighlight);
@@ -73,30 +74,35 @@ public class Register extends JFrame {
 		header.setBounds(0, 0, 382, 43);
 		contentPane.add(header);
 		
+		//First name textfield
 		txt_fname = new JTextField();
 		txt_fname.setText("Your First Name");
 		txt_fname.setBounds(87, 88, 193, 29);
 		contentPane.add(txt_fname);
 		txt_fname.setColumns(10);
 		
+		//Last name textfield
 		txt_lname = new JTextField();
 		txt_lname.setText("Your Last Name");
 		txt_lname.setColumns(10);
 		txt_lname.setBounds(87, 140, 193, 29);
 		contentPane.add(txt_lname);
 		
+		//Email textfield
 		txt_email = new JTextField();
 		txt_email.setText("Your Email Id");
 		txt_email.setColumns(10);
 		txt_email.setBounds(87, 189, 193, 29);
 		contentPane.add(txt_email);
 		
+		//Username textfield
 		txt_usr = new JTextField();
 		txt_usr.setText("Your Username");
 		txt_usr.setColumns(10);
 		txt_usr.setBounds(87, 238, 193, 29);
 		contentPane.add(txt_usr);
 		
+		//Registor function
 		btn_rgstr = new JButton("Register");
 		btn_rgstr.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -116,12 +122,14 @@ public class Register extends JFrame {
 			}
 		});
 		
+		//Password textfield
 		txt_pass = new JPasswordField();
 		txt_pass.setText("Password");
 		txt_pass.setEchoChar('*');
 		txt_pass.setBounds(87, 288, 193, 29);
 		contentPane.add(txt_pass);
 		
+		//Contact textfield
 		txt_cntct = new JTextField();
 		txt_cntct.setText("Contact no");
 		txt_cntct.setColumns(10);
