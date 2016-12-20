@@ -1,6 +1,6 @@
-import java.awt.BorderLayout;
 // Search.Java is a search function to check on system. 
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
