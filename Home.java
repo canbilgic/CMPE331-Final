@@ -39,7 +39,7 @@ public class Home extends JFrame {
 	}
 
 	
-		/**
+	/**
 	 * Create the frame.
 	 */
 	public Home() {
@@ -51,7 +51,7 @@ public class Home extends JFrame {
 		contentPane.setLayout(null);
 		
 		Image img = Toolkit.getDefaultToolkit().createImage("img1.jpg");
-		
+		//register label	
 		Label lbl_rgstr = new Label("Register");
 		lbl_rgstr.addMouseListener(new MouseAdapter() {
 			@Override
@@ -64,7 +64,7 @@ public class Home extends JFrame {
 		lbl_rgstr.setAlignment(Label.CENTER);
 		lbl_rgstr.setBounds(169, 93, 225, 32);
 		contentPane.add(lbl_rgstr);
-		
+		//login label
 		Label lbl_login = new Label("Login");
 		lbl_login.addMouseListener(new MouseAdapter() {
 			@Override
@@ -78,7 +78,7 @@ public class Home extends JFrame {
 		lbl_login.setBounds(169, 166, 225, 32);
 		contentPane.add(lbl_login);
 		
-		//this ıs our search label
+		//this is our search label
 	
 		Label lbl_srch = new Label("Search");
 		lbl_srch.addMouseListener(new MouseAdapter() {
