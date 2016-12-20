@@ -37,3 +37,67 @@ public class Home extends JFrame {
 			}
 		});
 	}
+
+	
+		/**
+	 * Create the frame.
+	 */
+	public Home() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 578, 431);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Image img = Toolkit.getDefaultToolkit().createImage("img1.jpg");
+		
+		Label lbl_rgstr = new Label("Register");
+		lbl_rgstr.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				Register fr1 = new Register();
+				fr1.setVisible(true);
+				dispose();
+			}
+		});
+		lbl_rgstr.setAlignment(Label.CENTER);
+		lbl_rgstr.setBounds(169, 93, 225, 32);
+		contentPane.add(lbl_rgstr);
+		
+		Label lbl_login = new Label("Login");
+		lbl_login.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Login fr2 = new Login();
+				fr2.setVisible(true);
+				dispose();
+			}
+		});
+		lbl_login.setAlignment(Label.CENTER);
+		lbl_login.setBounds(169, 166, 225, 32);
+		contentPane.add(lbl_login);
+		
+		//this ıs our search label
+	
+		Label lbl_srch = new Label("Search");
+		lbl_srch.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Search fr3 = new Search();
+				fr3.setVisible(true);
+				dispose();
+			}
+		});
+		lbl_srch.setAlignment(Label.CENTER);
+		lbl_srch.setBounds(169, 240, 225, 32);
+		contentPane.add(lbl_srch);
+		
+		Canvas login_box = new Canvas();
+		login_box.setForeground(Color.BLUE);
+		login_box.setBackground(SystemColor.controlHighlight);
+		login_box.setBounds(123, 56, 312, 253);
+		contentPane.add(login_box);
+	}
+
+}
