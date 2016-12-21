@@ -38,7 +38,6 @@ public class Home extends JFrame {
 		});
 	}
 
-	
 	/**
 	 * Create the frame.
 	 */
@@ -51,11 +50,12 @@ public class Home extends JFrame {
 		contentPane.setLayout(null);
 		
 		Image img = Toolkit.getDefaultToolkit().createImage("img1.jpg");
-		//register label	
+		//Register Label
 		Label lbl_rgstr = new Label("Register");
 		lbl_rgstr.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				//when user click on register button this will open regiter window
 				Register fr1 = new Register();
 				fr1.setVisible(true);
 				dispose();
@@ -64,11 +64,12 @@ public class Home extends JFrame {
 		lbl_rgstr.setAlignment(Label.CENTER);
 		lbl_rgstr.setBounds(169, 93, 225, 32);
 		contentPane.add(lbl_rgstr);
-		//login label
+		//Login Label
 		Label lbl_login = new Label("Login");
 		lbl_login.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//when user click on login button this will open login window
 				Login fr2 = new Login();
 				fr2.setVisible(true);
 				dispose();
@@ -77,14 +78,13 @@ public class Home extends JFrame {
 		lbl_login.setAlignment(Label.CENTER);
 		lbl_login.setBounds(169, 166, 225, 32);
 		contentPane.add(lbl_login);
-		
-		//this is our search label
-	
+		//This is our search Label
 		Label lbl_srch = new Label("Search");
 		lbl_srch.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Search fr3 = new Search();
+				//when user click on search button this will open search window
+				Search fr3 = new Search("Home");
 				fr3.setVisible(true);
 				dispose();
 			}
